@@ -3,6 +3,7 @@ import 'dotenv/config';
 import cors from 'cors';
 import { router } from './routes/routes';
 import { createDb } from './database/sqlite';
+import swaggerRouter from './swagger';
 
 const app = express();
 
@@ -13,6 +14,8 @@ createDb();
 app.use(express.json());
 
 app.use(cors());
+
+app.use('/v1', swaggerRouter);
 
 app.use( router);
 
