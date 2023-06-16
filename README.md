@@ -33,6 +33,7 @@ A API possui as seguintes rotas:
 
 - `GET /users`: Obter todos os usuários. Requer autenticação com token JWT no cabeçalho da requisição.
 - `DELETE /users/:id`: Deleta os usuários de acordo com id. Requer autenticação com token JWT no cabeçalho da requisição.
+- `UPDATE /users/:id`: Atualiza os usuários de acordo com id, somente senha. Requer autenticação com token JWT no cabeçalho da requisição.
 
 ## Segurança
 

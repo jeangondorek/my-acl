@@ -11,6 +11,76 @@
 			"item": [
 				{
 					"name": "get users",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/605ed188-0c1a-4802-bde0-fbea7a67d76d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"605ed188-0c1a-4802-bde0-fbea7a67d76d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"newPassword\": \"nova_senha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/3c7a4e65-9158-42ab-b75a-b01bcd8012fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"3c7a4e65-9158-42ab-b75a-b01bcd8012fc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -33,12 +103,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:4345/users",
+							"raw": "http://localhost:3000/users",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "4345",
+							"port": "3000",
 							"path": [
 								"users"
 							]
@@ -58,7 +128,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"jean\",\r\n    \"password\": \"senha_do_usuario\",\r\n    \"isAdmin\": false\r\n}",
+							"raw": "{\r\n    \"username\": \"jean\",\r\n    \"password\": \"senha_do_usuario\",\r\n    \"isAdmin\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -66,12 +136,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:4345/register",
+							"raw": "http://localhost:3000/register",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "4345",
+							"port": "3000",
 							"path": [
 								"register"
 							]
@@ -86,7 +156,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"senha_do_uSsuario\",\r\n    \"password\": \"senha_do_usuario\"\r\n}",
+							"raw": "{\r\n    \"username\": \"jean\",\r\n    \"password\": \"senha_do_usuario\",\r\n    \"isAdmin\": false\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -94,12 +164,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:4345/login",
+							"raw": "http://localhost:3000/login",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "4345",
+							"port": "3000",
 							"path": [
 								"login"
 							]

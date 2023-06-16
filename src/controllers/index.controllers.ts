@@ -6,5 +6,6 @@ import { deleteList } from "./list/listdelete.controller";
 import { updateList } from "./list/listupdate.controller";
 import { listUser } from "./admin/getall";
 import { deleteUser } from "./admin/deleteuser";
+import { updateuser } from "./admin/updateuser";
 
-export { listUser, listAll, createList, deleteList, updateList, registerUser, loginUser, deleteUser};
+export { updateuser, listUser, listAll, createList, deleteList, updateList, registerUser, loginUser, deleteUser};
