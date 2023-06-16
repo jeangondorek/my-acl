@@ -12,7 +12,7 @@ const options: swaggerJsdoc.Options = {
       version: '1.0.0',
     },
   },
-  apis: ['<path-to-your-route-files/*.ts>'], // Substitua <path-to-your-route-files> pelo caminho para seus arquivos de rota
+  apis: ['../swagger.json'],
 };
 
 const specs = swaggerJsdoc(options);

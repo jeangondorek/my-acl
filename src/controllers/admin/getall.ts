@@ -10,7 +10,6 @@ export const listUser = (req: Request & { user: User }, res: Response) => {
       return res.status(500).json({ message: 'Erro ao obter os usuários.' });
     }
 
-    // Converter o valor is_admin para booleano
     const users = rows.map((row: any) => ({
       ...row,
       is_admin: Boolean(row.is_admin),

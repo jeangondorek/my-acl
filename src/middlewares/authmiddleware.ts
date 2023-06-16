@@ -4,7 +4,7 @@ const sqlite3 = require('sqlite3').verbose();
 const db = new sqlite3.Database('database.db');
 
 interface CustomRequest extends Request {
-  user?: any; // Defina o tipo adequado para a propriedade 'user' aqui
+  user?: any;
 }
 
 export function authenticateUser(req: CustomRequest, res: Response, next: NextFunction) {

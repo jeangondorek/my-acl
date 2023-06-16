@@ -10,8 +10,7 @@ Certifique-se de ter o Node.js e o npm instalados em sua máquina.
 2. Navegue até o diretório do projeto: `cd acl-api`
 3. Instale as dependências: `npm install`
 4. Configure as variáveis de ambiente no arquivo `.env` com as seguintes informações:
-   - `PORT`: porta em que o servidor será executado (padrão: 4345)
-   - `JWT_SECRET`: segredo para a geração e validação dos tokens JWT
+   - `PORT`: porta em que o servidor será executado (padrão: 3000)
 5. Inicie o servidor: `npm start`
 
 ## Rotas
@@ -41,6 +40,8 @@ A API utiliza autenticação baseada em tokens JWT (JSON Web Tokens). Para acess
 - Authorization: Bearer {token}
 
 ## Documentação da API
+
+- `GET /api-docs`: Documentação da API no formato Swagger UI.
 
 A documentação da API, incluindo detalhes sobre todas as rotas, parâmetros e respostas, pode ser encontrada no arquivo [swagger.json](./swagger.json). Você pode importar este arquivo no Swagger UI ou em outras ferramentas de documentação para visualizar e interagir com a API de forma mais amigável.
 

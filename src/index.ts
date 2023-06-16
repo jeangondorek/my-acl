@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use('/v1', swaggerRouter);
+app.use( swaggerRouter);
 
 app.use( router);
 
