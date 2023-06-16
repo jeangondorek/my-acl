@@ -3,7 +3,8 @@ import 'dotenv/config';
 import cors from 'cors';
 import { router } from './routes/routes';
 import { createDb } from './database/sqlite';
-import swaggerRouter from './swagger';
+import swaggerUi from 'swagger-ui-express';
+import swaggerDocument from '../swagger.json';
 
 const app = express();
 
@@ -15,9 +16,9 @@ app.use(express.json());
 
 app.use(cors());
 
-app.use( swaggerRouter);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-app.use( router);
+app.use(router);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
